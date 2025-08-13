@@ -19,11 +19,11 @@ import re
 
 def Handle_mathematical_questions(userInput):
     patterns = [
-        r'(?:add|sum of)\s*(\d+)\s*(?:and|to)\s*(\d+)',
-        r'(?:subtract)\s*(\d+)\s*(?:from)\s*(\d+)',
-        r'(?:multiply| multiplication of)\s*(\d+)\s*(?:by|and)\s*(\d+)',
-        r'(?:divide)\s*(\d+)\s*(?:by)\s*(\d+)',
-        r'(?:what is|calculate)\s*(\d+)\s*(plus|\+|minus|\-|times|\*|divided by|/)\s*(\d+)'
+        r'(?:add|sum of)\s*(\d+\.?\d*)\s*(?:and|to)\s*(\d+\.?\d*)',
+        r'(?:subtract)\s*(\d+\.?\d*)\s*(?:from)\s*(\d+\.?\d*)',
+        r'(?:multiply| multiplication of)\s*(\d+\.?\d*)\s*(?:by|and)\s*(\d+\.?\d*)',
+        r'(?:divide)\s*(\d+\.?\d*)\s*(?:by)\s*(\d+\.?\d*)',
+        r'(?:what is|calculate)\s*(\d+\.?\d*)\s*(plus|\+|minus|\-|times|\*|divided by|/)\s*(\d+\.?\d*)'
     ]
 
     for pattern in patterns:
@@ -96,6 +96,7 @@ def Chatbot():
             print(general_responses[userInput])
         else:
             print("Cannot answer this question, Try another question!")
+
 
 
 Chatbot()
