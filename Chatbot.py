@@ -89,7 +89,7 @@ def Chatbot():
             if math_result == "Cannot divide by zero":
                 print(math_result)
             else:
-                print(f"The result is {math_result}")
+                print(f"The result is {round(math_result, 10)}")
             continue
         
         if userInput in general_responses:
@@ -100,3 +100,4 @@ def Chatbot():
 
 
 Chatbot()
+
